@@ -39,7 +39,7 @@ int main (void)
     sock_client = accept (sock_des, (struct sockaddr *)&client, &addr_size);
     while (byte_rec > 0)
     {
-        byte_rec = recv (sock_client, &tcp_h, sizeof tcp_h, 0)
+        byte_rec = recv (sock_client, &tcp_h, sizeof tcp_h, 0);
         printf ("%d", byte_rec);
     }
 }
