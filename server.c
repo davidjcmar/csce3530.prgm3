@@ -3,7 +3,7 @@
 int main (void)
 {
     int sock_des, sock_client;
-    int byte_rec;
+    int byte_rec = 1;
     struct sockaddr_in server, client;
     struct tcp_head tcp_h;
     socklen_t addr_size;
@@ -37,8 +37,9 @@ int main (void)
     /* accept incoming connection */
     addr_size = sizeof client;
     sock_client = accept (sock_des, (struct sockaddr *)&client, &addr_size);
-    while (byte_rec = recv (sock_client, &tcp_h, sizeof tcp_h, 0))
+    while (byte_rec > 0)
     {
+        byte_rec = recv (sock_client, &tcp_h, sizeof tcp_h, 0)
         printf ("%d", byte_rec);
     }
 }
