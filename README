@@ -1,0 +1,9 @@
+Program 3 README
+David Cmar
+
+I had several other projects all due at the same time as this program and must have become confused about due dates.
+That is what I meant by getting the dates turned around.
+
+I included a makefile with this program as well, so you can just run make in the directory and it should compile the 
+server and client programs. It runs basically the same as programming assignment 4, but without the need to direct 
+input for the data to be sent.
